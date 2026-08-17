@@ -63,7 +63,7 @@ export const BeachServicesSection: React.FC<BeachServicesSectionProps> = ({
             </a>
           </div>
 
-          {/* Card 2: Aluguel de Mesas na Praia */}
+          {/* Card 2: Mesas & Estrutura na Praia */}
           <div className="bg-white p-6 rounded-[2rem] border-4 border-amber-300 shadow-md hover:border-orange-400 transition-all flex flex-col justify-between">
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-amber-400 text-orange-950 flex items-center justify-center font-black text-2xl shadow-sm border-2 border-orange-400">
@@ -71,15 +71,15 @@ export const BeachServicesSection: React.FC<BeachServicesSectionProps> = ({
               </div>
               <div>
                 <span className="text-xs font-black uppercase text-orange-600 tracking-wider">Consumo Local</span>
-                <h3 className="text-xl font-black text-slate-800">Aluguel de Mesas</h3>
+                <h3 className="text-xl font-black text-slate-800">Atendimento Pé na Areia</h3>
                 <p className="text-xs text-slate-600 font-medium mt-1">
-                  1 Mesa de Praia + 4 Cadeiras confortáveis + Guarda-sol exclusivo pé na areia com garçom para seu grupo.
+                  Mesas confortáveis com guarda-sol e atendimento de garçom exclusivo para você e sua família relaxarem à beira-mar.
                 </p>
               </div>
               <div className="bg-amber-50 p-3 rounded-xl border border-amber-200">
-                <span className="block text-xs font-bold text-slate-500">Valor Único da Estrutura:</span>
-                <span className="text-xl font-black text-orange-600">R$ 50,00</span>
-                <span className="block text-[10px] text-teal-700 font-semibold">Garantia de sombra e conforto na praia</span>
+                <span className="block text-xs font-bold text-slate-500">Conforto & Sombra:</span>
+                <span className="text-lg font-black text-orange-600">Mesas Pé na Areia</span>
+                <span className="block text-[10px] text-teal-700 font-semibold">Atendimento completo com garçom</span>
               </div>
             </div>
 

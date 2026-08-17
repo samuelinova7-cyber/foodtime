@@ -106,6 +106,9 @@ export default function App() {
           onScrollToMenu={scrollToMenu}
         />
 
+        {/* Instagram Reels Auto-scrolling Section */}
+        <InstagramSection />
+
         {/* Video Showcase Section */}
         <VideoShowcaseSection />
 
@@ -120,9 +123,6 @@ export default function App() {
         <BeachServicesSection
           onOpenReservation={() => setIsReservationOpen(true)}
         />
-
-        {/* Instagram Reels Auto-scrolling Section */}
-        <InstagramSection />
 
         {/* 5-Star Google Reviews Auto-scrolling Section */}
         <GoogleReviewsSection />

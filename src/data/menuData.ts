@@ -8,8 +8,9 @@ export const RESTAURANT_INFO = {
   whatsappFormatted: '(82) 99311-8752',
   instagram: '@foodttime',
   instagramUrl: 'https://www.instagram.com/foodttime',
-  logoUrl: 'https://res.cloudinary.com/gu3r4btn/image/upload/v1786390511/WhatsApp_Image_2026-08-10_at_4.20.19_PM-removebg-preview_g3nj67.png',
-  ifoodUrl: 'https://www.ifood.com.br/restaurante/marechal-deodoro-al/food-time-praia-do-frances',
+  logoUrl: 'https://res.cloudinary.com/xhuikt2k/image/upload/v1786984977/WhatsApp_Image_2026-08-17_at_1.38.48_PM-removebg-preview.png',
+  ifoodUrl: 'https://www.ifood.com.br/delivery/marechal-deodoro-al/food-time-frances/bdcbb6ec-1f57-45e2-a768-36eddb1d5a96',
+  googleReviewUrl: 'https://g.page/r/CRsCELd-tJq4EAE/review',
   ifoodRating: '4.9 ★',
   ifoodReviews: '100+ avaliações',
   ifoodDeliveryTime: '25-40 min',
@@ -27,7 +28,6 @@ export const MENU_CATEGORIES: { id: MenuCategory; name: string; icon: string; co
   { id: 'petiscos-porcoes', name: 'Petiscos & Porções', icon: '🦐', color: 'bg-teal-500 text-white', borderColor: 'border-teal-400' },
   { id: 'lanches-cafe', name: 'Lanches & Café Regional', icon: '🫓', color: 'bg-pink-500 text-white', borderColor: 'border-pink-400' },
   { id: 'bebidas-drinks', name: 'Bebidas & Drinks', icon: '🍹', color: 'bg-sky-500 text-white', borderColor: 'border-sky-400' },
-  { id: 'servicos-praia', name: 'Serviços de Praia', icon: '🏖️', color: 'bg-emerald-500 text-white', borderColor: 'border-emerald-400' },
 ];
 
 export const SUBCATEGORIES_MAP: Record<MenuCategory, { id: SubCategory; name: string }[]> = {
@@ -965,21 +965,6 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: 'Bebidas & Drinks',
     subCategoryName: 'Drinks & Coquetéis',
     badge: 'Tropical Pé na Areia',
-    isPopular: true
-  },
-
-  // ----------------------------------------------------
-  // 6. SERVIÇOS DE PRAIA
-  // ----------------------------------------------------
-  {
-    id: 'srv-praia-1',
-    name: 'Aluguel de Mesa na Praia',
-    description: 'Estrutura completa pé na areia: 1 Mesa + 4 Cadeiras + Guarda-sol exclusivo com atendimento de garçom na praia.',
-    accompaniments: 'Localização privilegiada na areia da Praia do Francês',
-    price: 50.00,
-    category: 'servicos-praia',
-    categoryName: 'Serviços de Praia',
-    badge: 'Pé na Areia',
     isPopular: true
   }
 ];

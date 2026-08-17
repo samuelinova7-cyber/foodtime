@@ -31,7 +31,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
     text += `⏰ *Horário Previsto:* ${time}\n`;
     text += `👥 *Quantidade de Pessoas:* ${peopleCount} pessoas\n`;
     text += `📍 *Ambiente Preferido:* ${locationPref === 'beira-mar' ? 'Pé na Areia (Beira-mar)' : 'Área Coberta'}\n`;
-    text += `🏖️ *Estrutura de Praia (Mesa + 4 Cadeiras + Guarda-sol):* ${needsBeachTable ? 'Sim, solicitar aluguel (R$ 50,00)' : 'Apenas mesa no salão'}\n`;
+    text += `🏖️ *Estrutura de Praia:* ${needsBeachTable ? 'Sim, mesa pé na areia com guarda-sol' : 'Mesa convencional'}\n`;
 
     if (specialRequests.trim()) {
       text += `📝 *Observações:* ${specialRequests.trim()}\n`;
@@ -167,14 +167,14 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
             </div>
           </div>
 
-          {/* Beach Table Rental Option */}
+          {/* Beach Table Option */}
           <div className="bg-white p-3.5 rounded-2xl border-2 border-amber-300 flex items-center justify-between">
             <div className="text-xs">
               <span className="font-extrabold text-slate-800 block">
-                Incluir Aluguel de Mesa Pé na Areia (R$ 50,00)
+                Mesa Pé na Areia (Guarda-sol + Cadeiras)
               </span>
               <span className="text-[10px] text-teal-700 font-semibold">
-                Guarda-sol + Mesa + 4 cadeiras + garçom exclusivo
+                Atendimento de garçom exclusivo à beira-mar
               </span>
             </div>
             <input

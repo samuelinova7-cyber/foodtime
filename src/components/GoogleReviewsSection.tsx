@@ -4,8 +4,8 @@ import { GOOGLE_REVIEWS, ReviewItem } from '../data/reviewsData';
 import { RESTAURANT_INFO } from '../data/menuData';
 
 export const GoogleReviewsSection: React.FC = () => {
-  // Google review direct URL (opens Google Maps search / review page)
-  const googleReviewUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Food Time Praia do Francês Marechal Deodoro AL')}`;
+  // Google review direct URL (opens Google review modal directly)
+  const googleReviewUrl = RESTAURANT_INFO.googleReviewUrl;
 
   // Helper for generating distinct avatar background colors based on author name
   const getAvatarBg = (name: string) => {
