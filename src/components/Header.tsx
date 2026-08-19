@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
             <p className="text-[10px] sm:text-xs font-bold text-teal-700 tracking-wider uppercase mt-0.5">
-              Praia do Francês • iFood & Pé na Areia
+              Praia do Francês • Restaurante & iFood Oficial
             </p>
           </div>
         </div>

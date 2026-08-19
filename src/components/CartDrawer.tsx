@@ -56,8 +56,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       text += `🛵 *Tipo de Pedido:* Delivery / Entrega em Pousada (${locationDetail || 'Praia do Francês'})\n`;
     } else if (orderType === 'whatsapp') {
       text += `🛵 *Tipo de Pedido:* Delivery WhatsApp (${locationDetail || 'Pousada / Casa'})\n`;
-    } else if (orderType === 'areia') {
-      text += `🏖️ *Local:* Consumo Pé na Areia (Guarda-sol / Mesa nº ${locationDetail || 'A informar'})\n`;
+    } else if (orderType === 'varanda') {
+      text += `🍽️ *Local:* Mesa na Varanda / Área Externa (Mesa nº ${locationDetail || 'A informar'})\n`;
     } else {
       text += `🍽️ *Local:* Mesa no Restaurante (${locationDetail || 'Salão Principal'})\n`;
     }
@@ -251,18 +251,18 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
                   <button
                     type="button"
-                    onClick={() => setOrderType('areia')}
+                    onClick={() => setOrderType('varanda')}
                     className={`p-2.5 rounded-2xl border-2 font-black text-xs flex flex-col items-center gap-1 transition-all cursor-pointer ${
-                      orderType === 'areia'
+                      orderType === 'varanda'
                         ? 'bg-amber-400 border-orange-500 text-orange-950 shadow-xs'
                         : 'bg-amber-50 border-amber-200 text-slate-700'
                     }`}
                   >
                     <div className="flex items-center gap-1">
                       <Umbrella className="w-4 h-4" />
-                      <span>Pé na Areia</span>
+                      <span>Varanda</span>
                     </div>
-                    <span className="text-[10px] font-semibold text-orange-900">Mesa na Praia</span>
+                    <span className="text-[10px] font-semibold text-orange-900">Área Externa</span>
                   </button>
 
                   <button
@@ -278,7 +278,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       <MapPin className="w-4 h-4" />
                       <span>Restaurante</span>
                     </div>
-                    <span className="text-[10px] font-normal opacity-90">Salão Coberto</span>
+                    <span className="text-[10px] font-normal opacity-90">Salão Principal</span>
                   </button>
                 </div>
 
@@ -287,8 +287,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <label className="block text-[11px] font-bold text-slate-600 mb-1">
                     {orderType === 'ifood' || orderType === 'whatsapp'
                       ? 'Endereço de Entrega / Nome da Pousada:'
-                      : orderType === 'areia'
-                      ? 'Número do Guarda-sol / Mesa na Praia:'
+                      : orderType === 'varanda'
+                      ? 'Número da Mesa na Varanda:'
                       : 'Número da Mesa no Salão:'}
                   </label>
                   <input
@@ -296,9 +296,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     placeholder={
                       orderType === 'ifood' || orderType === 'whatsapp'
                         ? 'Ex: Pousada Hibiscus - Quarto 04'
-                        : orderType === 'areia'
-                        ? 'Ex: Guarda-sol 12 na areia'
-                        : 'Ex: Mesa 05 perto da varanda'
+                        : orderType === 'varanda'
+                        ? 'Ex: Mesa 03 na varanda externa'
+                        : 'Ex: Mesa 05 no salão'
                     }
                     value={locationDetail}
                     onChange={(e) => setLocationDetail(e.target.value)}

@@ -2,7 +2,7 @@ import { MenuItem, MenuCategory, SubCategory } from '../types';
 
 export const RESTAURANT_INFO = {
   name: 'Food Time',
-  slogan: 'Sua melhor opção na Praia do Francês – Sabores inesquecíveis no iFood e Pé na Areia',
+  slogan: 'Sua melhor opção na praia do francês e ifood',
   address: 'Av. dos Arrecifes, 06 - Praia do Francês, Marechal Deodoro - AL',
   whatsapp: '5582993118752',
   whatsappFormatted: '(82) 99311-8752',
@@ -964,7 +964,7 @@ export const MENU_ITEMS: MenuItem[] = [
     subCategory: 'drinks-coqueteis',
     categoryName: 'Bebidas & Drinks',
     subCategoryName: 'Drinks & Coquetéis',
-    badge: 'Tropical Pé na Areia',
+    badge: 'Especial da Casa',
     isPopular: true
   }
 ];

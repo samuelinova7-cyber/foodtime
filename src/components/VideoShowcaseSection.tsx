@@ -40,7 +40,7 @@ export const VideoShowcaseSection: React.FC = () => {
             Sinta o Sabor & o Clima da Praia do Francês
           </h2>
           <p className="text-sm sm:text-base text-slate-700 font-semibold">
-            Confira como nossos pratos, porções de frutos do mar e bebidas são preparados e servidos com carinho no iFood e pé na areia.
+            Confira como nossos pratos, porções de frutos do mar e bebidas são preparados e servidos com carinho no iFood e no restaurante.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export const VideoShowcaseSection: React.FC = () => {
               </span>
               <span className="bg-amber-400/95 backdrop-blur-md text-orange-950 font-black text-[10px] sm:text-xs px-3 py-1.5 rounded-xl border border-orange-500/50 shadow-md flex items-center gap-1.5">
                 <Umbrella className="w-3.5 h-3.5 text-orange-900" />
-                <span>Atendimento na Praia</span>
+                <span>Restaurante & Delivery</span>
               </span>
             </div>
 

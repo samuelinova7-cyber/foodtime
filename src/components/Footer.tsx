@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({
               </h3>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed font-medium">
-              Sua melhor opção na Praia do Francês. Sabores inesquecíveis com o pé na areia e o melhor tempero alagoano.
+              Sua melhor opção na Praia do Francês e iFood. Sabores inesquecíveis e o melhor tempero alagoano.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button onClick={onOpenReservation} className="hover:text-orange-400 transition-colors cursor-pointer">
-                  Reserva de Mesas na Praia
+                  Reserva de Mesas no Restaurante
                 </button>
               </li>
               <li>
