@@ -1,14 +1,8 @@
 import React from 'react';
-import { Umbrella, CreditCard, Clock, Bike, ExternalLink, ShieldCheck, HeartHandshake, Star } from 'lucide-react';
+import { Utensils, CreditCard, Clock, Bike, ExternalLink, ShieldCheck, Phone, Star } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 
-interface BeachServicesSectionProps {
-  onOpenReservation: () => void;
-}
-
-export const BeachServicesSection: React.FC<BeachServicesSectionProps> = ({
-  onOpenReservation,
-}) => {
+export const BeachServicesSection: React.FC = () => {
   return (
     <section className="py-12 bg-gradient-to-b from-amber-50 to-orange-100/60 border-t-4 border-amber-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -26,7 +20,7 @@ export const BeachServicesSection: React.FC<BeachServicesSectionProps> = ({
           </p>
         </div>
 
-        {/* 4 Cards Grid (iFood Delivery, Mesa no Restaurante, Horários, Pagamento) */}
+        {/* 4 Cards Grid (iFood Delivery, Atendimento no Salão, Horários, Pagamento) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           {/* Card 1: iFood Delivery */}
@@ -63,32 +57,35 @@ export const BeachServicesSection: React.FC<BeachServicesSectionProps> = ({
             </a>
           </div>
 
-          {/* Card 2: Mesas & Salão */}
+          {/* Card 2: Salão & Atendimento */}
           <div className="bg-white p-6 rounded-[2rem] border-4 border-amber-300 shadow-md hover:border-orange-400 transition-all flex flex-col justify-between">
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-amber-400 text-orange-950 flex items-center justify-center font-black text-2xl shadow-sm border-2 border-orange-400">
-                <Umbrella className="w-8 h-8" />
+                <Utensils className="w-8 h-8" />
               </div>
               <div>
                 <span className="text-xs font-black uppercase text-orange-600 tracking-wider">Consumo Local</span>
                 <h3 className="text-xl font-black text-slate-800">Atendimento no Restaurante</h3>
                 <p className="text-xs text-slate-600 font-medium mt-1">
-                  Mesas confortáveis e atendimento atencioso para você e sua família almoçarem com tranquilidade na Praia do Francês.
+                  Ambiente acolhedor e atendimento atencioso para você e sua família almoçarem com tranquilidade na Praia do Francês.
                 </p>
               </div>
               <div className="bg-amber-50 p-3 rounded-xl border border-amber-200">
                 <span className="block text-xs font-bold text-slate-500">Conforto & Sabor:</span>
                 <span className="text-lg font-black text-orange-600">Ambiente Acolhedor</span>
-                <span className="block text-[10px] text-teal-700 font-semibold">Atendimento no salão e delivery</span>
+                <span className="block text-[10px] text-teal-700 font-semibold">Salão principal e atendimento ágil</span>
               </div>
             </div>
 
-            <button
-              onClick={onOpenReservation}
-              className="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-3 px-4 rounded-xl shadow-[3px_3px_0px_0px_#c2410c] transition-all active:translate-y-0.5 active:shadow-none text-xs uppercase tracking-wider cursor-pointer text-center"
+            <a
+              href={`https://wa.me/${RESTAURANT_INFO.whatsapp}?text=${encodeURIComponent('Olá, Food Time! Gostaria de informações sobre o restaurante.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-black py-3 px-4 rounded-xl shadow-[3px_3px_0px_0px_#16a34a] transition-all active:translate-y-0.5 active:shadow-none text-xs uppercase tracking-wider cursor-pointer text-center flex items-center justify-center gap-1.5"
             >
-              Reservar Mesa
-            </button>
+              <Phone className="w-4 h-4" />
+              <span>Falar no WhatsApp</span>
+            </a>
           </div>
 
           {/* Card 3: Horários & Praticidade */}

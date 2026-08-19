@@ -1,12 +1,11 @@
 import React from 'react';
-import { ShoppingBag, Calendar, MapPin, Phone, Compass, ExternalLink } from 'lucide-react';
+import { ShoppingBag, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 
 interface HeaderProps {
   cartItemCount: number;
   cartTotal: number;
   onOpenCart: () => void;
-  onOpenReservation: () => void;
   onScrollToMenu: () => void;
   onScrollToLocation: () => void;
 }
@@ -15,7 +14,6 @@ export const Header: React.FC<HeaderProps> = ({
   cartItemCount,
   cartTotal,
   onOpenCart,
-  onOpenReservation,
   onScrollToMenu,
   onScrollToLocation,
 }) => {
@@ -105,16 +103,6 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="hidden md:inline">Pedir no iFood</span>
             <ExternalLink className="w-3.5 h-3.5 hidden xs:inline opacity-80" />
           </a>
-
-          {/* Reserve Table button */}
-          <button
-            onClick={onOpenReservation}
-            className="hidden sm:flex items-center gap-1.5 bg-amber-400 hover:bg-amber-500 text-orange-950 font-black py-2.5 px-3.5 rounded-xl border-2 border-orange-500 shadow-[3px_3px_0px_0px_#ea580c] transition-all active:translate-y-0.5 active:shadow-none text-xs sm:text-sm"
-          >
-            <Calendar className="w-4 h-4" />
-            <span className="hidden lg:inline">Mesa na Praia</span>
-            <span className="lg:hidden">Reservar</span>
-          </button>
 
           {/* Cart Tray Button */}
           <button

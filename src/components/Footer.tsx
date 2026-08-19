@@ -5,13 +5,11 @@ import { RESTAURANT_INFO } from '../data/menuData';
 interface FooterProps {
   onScrollToMenu: () => void;
   onScrollToLocation: () => void;
-  onOpenReservation: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   onScrollToMenu,
   onScrollToLocation,
-  onOpenReservation,
 }) => {
   return (
     <footer className="bg-slate-900 text-white border-t-4 border-amber-400 py-10 px-4 sm:px-8">
@@ -47,9 +45,14 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
               <li>
-                <button onClick={onOpenReservation} className="hover:text-orange-400 transition-colors cursor-pointer">
-                  Reserva de Mesas no Restaurante
-                </button>
+                <a
+                  href={RESTAURANT_INFO.ifoodUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-400 transition-colors"
+                >
+                  Pedir no iFood
+                </a>
               </li>
               <li>
                 <button onClick={onScrollToLocation} className="hover:text-orange-400 transition-colors cursor-pointer">

@@ -11,7 +11,6 @@ import { GoogleReviewsSection } from './components/GoogleReviewsSection';
 import { LocationContactSection } from './components/LocationContactSection';
 import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
-import { ReservationModal } from './components/ReservationModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
@@ -26,7 +25,6 @@ export default function App() {
   });
 
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isReservationOpen, setIsReservationOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -93,7 +91,6 @@ export default function App() {
         cartItemCount={cartItemCount}
         cartTotal={cartTotal}
         onOpenCart={() => setIsCartOpen(true)}
-        onOpenReservation={() => setIsReservationOpen(true)}
         onScrollToMenu={scrollToMenu}
         onScrollToLocation={scrollToLocation}
       />
@@ -102,7 +99,6 @@ export default function App() {
       <main className="flex-1">
         {/* Hero Section */}
         <HeroSection
-          onOpenReservation={() => setIsReservationOpen(true)}
           onScrollToMenu={scrollToMenu}
         />
 
@@ -119,10 +115,8 @@ export default function App() {
           onRemoveOneFromCart={handleRemoveOneFromCart}
         />
 
-        {/* Beach Services & Amenities */}
-        <BeachServicesSection
-          onOpenReservation={() => setIsReservationOpen(true)}
-        />
+        {/* Channels & Differentials */}
+        <BeachServicesSection />
 
         {/* 5-Star Google Reviews Auto-scrolling Section */}
         <GoogleReviewsSection />
@@ -135,7 +129,6 @@ export default function App() {
       <Footer
         onScrollToMenu={scrollToMenu}
         onScrollToLocation={scrollToLocation}
-        onOpenReservation={() => setIsReservationOpen(true)}
       />
 
       {/* Slide-over WhatsApp Cart Drawer */}
@@ -146,12 +139,6 @@ export default function App() {
         onAddToCart={handleAddToCart}
         onRemoveOneFromCart={handleRemoveOneFromCart}
         onClearCart={handleClearCart}
-      />
-
-      {/* Beach Table Reservation Modal */}
-      <ReservationModal
-        isOpen={isReservationOpen}
-        onClose={() => setIsReservationOpen(false)}
       />
 
       {/* Floating WhatsApp Action Button */}
